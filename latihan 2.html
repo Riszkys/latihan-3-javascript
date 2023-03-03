@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TUGAS KALKULATOR</title>
+  </head>
+  <body>
+    <h1>KALKULATOR PERCOBAAN</h1>
+    <br />
+    <br />
+    <!-- Bagian Dari angka pertama -->
+    <label for=""> Angka Pertama</label>
+    <input type="number" id="angkapertama" />
+    <br />
+    <br />
+    <!-- Bagian dari angka kedua -->
+    <label for=""> Angka Kedua</label>
+    <input type="number" id="angkakedua" />
+    <br />
+    <br />
+    <!-- Bagian Hasil Perhitungan -->
+    <label for=""> Hasil Perhitungan : </label>
+    <input type="number" id="hasilperhitungan" />
+    <br />
+    <br />
+    <!-- Membuat tombol button -->
+    <button onclick="bttambah()">Tambah (+)</button>
+    <button onclick="btkurang()">Kurang (-)</button>
+    <button onclick="btkali()">Kali (x)</button>
+    <button onclick="btbagi()">Bagi (/)</button>
+
+    <script>
+      // Menentukan nilai value dari variabel angka1
+      var angka1 = document.getElementById("angkapertama");
+      // Menentukan nilai value dari variabel angka1
+      var angka2 = document.getElementById("angkakedua");
+      // Menentukan nilai value dari variabel angka1
+      var hasilperhitungan = document.getElementById("hasilperhitungan");
+      // Menentukan fungsi button penjumlahan
+      function bttambah() {
+        hasilperhitungan.value = Number(angka1.value) + Number(angka2.value);
+      }
+      // Menentukan fungsi button pengurangan
+      function btkurang() {
+        hasilperhitungan.value = Number(angka1.value) - Number(angka2.value);
+      }
+      // Menentukan fungsi button perkalian
+      function btkali() {
+        hasilperhitungan.value = Number(angka1.value) * Number(angka2.value);
+      }
+      // Menentukan fungsi button Pembagian
+      function btbagi() {
+        hasilperhitungan.value = Number(angka1.value) / Number(angka2.value);
+      }
+      // menampilkan last modified document
+      document.write(
+        "<br> <br>  Dimodidifikasi terakhir Oleh Moch Rezeki Setiawan Pada : <br> " +
+          document.lastModified
+      );
+    </script>
+  </body>
+</html>
